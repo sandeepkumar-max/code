@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Habit Tracker — 7 Day</h1>
+  </header>
+
+  <main>
+    <section id="habit-section" class="card">
+      <h2>Habit</h2>
+      <div class="habit-header">
+        <input id="habit-name" placeholder="Habit name (e.g., Exercise)" />
+        <button id="save-habit">Save</button>
+      </div>
+      <div id="week" class="week"></div>
+      <canvas id="chart" width="600" height="120"></canvas>
+      <div class="habit-controls">
+        <button id="prev-week">◀ Prev</button>
+        <button id="next-week">Next ▶</button>
+        <button id="clear-week">Clear Week</button>
+      </div>
+    </section>
+
+    <section id="todo-section" class="card">
+      <h2>Todo</h2>
+      <div class="todo-input">
+        <input id="todo-text" placeholder="New task" />
+        <button id="add-todo">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section id="reminder-section" class="card">
+      <h2>Reminders & Alarm</h2>
+      <div class="reminder-form">
+        <input type="time" id="rem-time" />
+        <input id="rem-msg" placeholder="Message" />
+        <label><input type="checkbox" id="rem-daily" checked /> Daily</label>
+        <button id="add-reminder">Add Reminder</button>
+      </div>
+      <ul id="reminders"></ul>
+      <div class="alarm-controls">
+        <input type="time" id="alarm-time" />
+        <input id="alarm-msg" placeholder="Alarm message" />
+        <button id="set-alarm">Set Alarm</button>
+        <button id="test-notif">Test Notification</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Works offline in the browser. Uses localStorage and Notifications.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
